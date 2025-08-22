@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hannes' Geburtstagseinladung – 28.08</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --hue: 210;
+  --bg1: hsl(var(--hue) 90% 60%);
+  --bg2: hsl(calc(var(--hue) + 60) 90% 60%);
+  --bg3: hsl(calc(var(--hue) + 120) 90% 60%);
+  --ink: #0f172a;
+  --muted: #475569;
+  --surface: rgba(255,255,255,.85);
+  --radius: 24px;
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+html, body { height: 100%; font-family: 'Poppins', sans-serif; color: var(--ink); }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(1200px 800px at 20% 10%, var(--bg1), transparent 70%),
+              radial-gradient(1200px 800px at 80% 20%, var(--bg2), transparent 70%),
+              radial-gradient(1200px 800px at 50% 90%, var(--bg3), transparent 70%),
+              #f1f5f9;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner {
+  padding: 24px;
+  background: conic-gradient(from 180deg at 70% 40%, var(--bg1), var(--bg2), var(--bg3), var(--bg1));
+  color: white;
+}
+
+.banner h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.banner p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.details {
+  padding: 20px;
+}
+
+.details h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .banner h1 { font-size: 24px; }
+  .banner p, .details p { font-size: 14px; }
+  .details h2 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="banner">
+      <h1>Hannes wird 13!</h1>
+      <p>Feier mit mir am 28. August</p>
+    </div>
+    <div class="details">
+      <h2>Details zur Party</h2>
+      <p>Ort: Bei mir Zuhause</p>
+      <p>Zeit: 16:00</p>
+      <p>Mitbringen: Gute Laune</p>
+      <button class="btn" onclick="bestätigen()">Ich bin dabei!</button>
+    </div>
+  </div>
+
+  <script>
+    function bestätigen() {
+      alert("Danke für die Rückmeldung, schreib mir auf Whattsapp eine Nachricht und du stehst auf der Gästeliste. Ich freu mich auf dich, bis dann!");
+    }
+  </script>
+</body>
+</html>
